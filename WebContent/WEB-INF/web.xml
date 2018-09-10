@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>SR03_Bartholme_Bathellier_Vancon</display-name>
+  <session-config>
+    <session-timeout>25</session-timeout>
+  </session-config>
+  <servlet>
+    <servlet-name>Inscription</servlet-name>
+    <servlet-class>controllers.Inscription</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Inscription</servlet-name>
+    <url-pattern>/Inscription</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Connexion</servlet-name>
+    <servlet-class>controllers.Connexion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Connexion</servlet-name>
+    <url-pattern>/connexion</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Deconnexion</servlet-name>
+    <servlet-class>controllers.Deconnexion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Deconnexion</servlet-name>
+    <url-pattern>/deconnexion</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>controllers.HomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern>/homeservlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>RestrictionFilter</filter-name>
+    <filter-class>filters.RestrictionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>RestrictionFilter</filter-name>
+    <url-pattern>/restreint/*</url-pattern>
+  </filter-mapping>
+</web-app>
